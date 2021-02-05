@@ -14,14 +14,6 @@ const routes: Routes = [
   
   }
  ];
- 
-
-
-
-
-
-
-
 
 
 
