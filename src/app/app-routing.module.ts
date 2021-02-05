@@ -11,8 +11,19 @@ const routes: Routes = [
   {
    path : 'comp2',
    component : Comp2Component
+  
   }
  ];
+ 
+
+
+
+
+
+
+
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
