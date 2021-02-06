@@ -6,26 +6,34 @@ import { Comp2Component } from './comp2/comp2.component';
 
 const routes: Routes = [
   {
-    path : 'comp1',
-    component : Comp1Component
-  },
-  {
-   path : 'comp2',
-   component : Comp2Component
-  
+    path: 'comp1',
+   
+    children: [
+      {path: 'comp1', component: Comp1Component},
+      {
+        
+        path: 'color/:color', component: ColorComponent
+      },
+      {
+        
+        path: 'comp2', component: Comp2Component
+      }
+    ]
   },
 
-  {
-    path : 'color/:color',
-    component : ColorComponent
-   
-   }
- ];
+
+
+
+//  {
+//     path: 'comp1',
+//     } 
+
+    ];
 
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
+      imports: [RouterModule.forRoot(routes)],
+      exports: [RouterModule]
+    })
 export class AppRoutingModule { }
