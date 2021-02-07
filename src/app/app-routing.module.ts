@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ColorComponent } from './color/color.component';
 import { Comp1Component } from './comp1/comp1.component';
 import { Comp2Component } from './comp2/comp2.component';
+import { DetailPersonComponent } from './detail-person/detail-person.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
       {
         
         path: 'comp2', component: Comp2Component
+      },
+      {
+        
+        path: 'id', component: DetailPersonComponent
       }
     ]
   },

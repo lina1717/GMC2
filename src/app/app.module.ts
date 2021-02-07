@@ -9,6 +9,8 @@ import { ComposantComponent } from './composant/composant.component';
 import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
 import { FormsModule } from '@angular/forms';
 import { ColorComponent } from './color/color.component';
+import { DetailPersonComponent } from './detail-person/detail-person.component';
+import { ModelComponent } from './model/model.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ColorComponent } from './color/color.component';
     Comp2Component,
     ComposantComponent,
     RouterSimulatorComponent,
-    ColorComponent
+    ColorComponent,
+    DetailPersonComponent,
+    ModelComponent
   ],
   imports: [
     BrowserModule,

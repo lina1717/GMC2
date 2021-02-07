@@ -1,0 +1,24 @@
+<form>
+   
+<div *ngFor="let pers of personnes">
+
+  <tr>
+    <td>
+
+      <strong>Name</strong> : {{pers.name}}
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      <strong>Firstname</strong> : {{pers.firstname}}
+    </td>
+  </tr>
+
+                <button type="button" class="btn btn-danger" (click)="deletePersonne()">Delete</button>
+</div>
+              </form>
+
+
+
+            
