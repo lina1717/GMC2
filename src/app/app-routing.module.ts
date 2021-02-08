@@ -4,6 +4,7 @@ import { ColorComponent } from './color/color.component';
 import { Comp1Component } from './comp1/comp1.component';
 import { Comp2Component } from './comp2/comp2.component';
 import { DetailPersonComponent } from './detail-person/detail-person.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -29,9 +30,9 @@ const routes: Routes = [
 
 
 
-//  {
-//     path: 'comp1',
-//     } 
+  {
+   path: 'login',component: LoginComponent
+   } 
 
     ];
 

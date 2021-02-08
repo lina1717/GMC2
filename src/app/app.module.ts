@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { ColorComponent } from './color/color.component';
 import { DetailPersonComponent } from './detail-person/detail-person.component';
 import { ModelComponent } from './model/model.component';
+import { LoginComponent } from './login/login.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ModelComponent } from './model/model.component';
     RouterSimulatorComponent,
     ColorComponent,
     DetailPersonComponent,
-    ModelComponent
+    ModelComponent,
+    LoginComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
