@@ -14,6 +14,7 @@ import { ModelComponent } from './model/model.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { AddComponent } from './add/add.component';
+import { SliderObservableComponent } from './asynchProg/slider-observable/slider-observable.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AddComponent } from './add/add.component';
     ModelComponent,
     LoginComponent,
     HeaderComponent,
-    AddComponent
+    AddComponent,
+    SliderObservableComponent
   ],
   imports: [
     BrowserModule,

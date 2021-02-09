@@ -20,11 +20,11 @@ export class AddComponent implements OnInit {
   ngOnInit(): void {
   }
   // addPerson(personneForm: any)
-  addPerson(personneForm: NgForm) {
-    console.log(personneForm);
+  //addPerson(personneForm:any) {
+    //console.log(personneForm);
   //  this.cvService.addPerson(person);
     //this.router.navigate(this.linK);
 
 
-  }
+  //}
 }
