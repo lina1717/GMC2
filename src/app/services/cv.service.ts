@@ -38,6 +38,13 @@ export class CvService {
       }
 
       }
+
+      addPerson(person: Person) {
+        this.personnes.push(person);
+  
+  
+  
+      }
     }
 
 

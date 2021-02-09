@@ -1,0 +1,54 @@
+<form  #personForm = "ngForm">
+
+    name :
+    <input
+   
+    required
+    name ="name"
+    type="text"
+    class="form-control">
+
+    firstname:
+    <input
+    name ="firstname"
+    required
+    type="text"
+    class="form-control">
+
+    job:
+    <input
+    name ="job"
+    type="text"
+    class="form-control">
+
+    path:
+    <input
+    name ="path"
+    type="text"
+    class="form-control">
+
+    age:
+    <input
+    required
+    name ="age"
+    pattern ="[0-1]?d\{1,2}"
+    type="number"
+    class="form-control">
+
+
+    cin:
+    <input
+    required
+    name ="cin"
+    type="number"
+    class="form-control">
+
+</form>
+
+
+<button
+[disabled]="personForm.invalid"
+(click)="addPerson(personneForm)"
+class="btn btn-primary">
+ add person
+</button>

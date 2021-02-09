@@ -13,6 +13,7 @@ import { DetailPersonComponent } from './detail-person/detail-person.component';
 import { ModelComponent } from './model/model.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
+import { AddComponent } from './add/add.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HeaderComponent } from './header/header.component';
     DetailPersonComponent,
     ModelComponent,
     LoginComponent,
-    HeaderComponent
+    HeaderComponent,
+    AddComponent
   ],
   imports: [
     BrowserModule,
