@@ -15,6 +15,10 @@ import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { AddComponent } from './add/add.component';
 import { SliderObservableComponent } from './asynchProg/slider-observable/slider-observable.component';
+import { ItemComponent } from './item/item.component';
+import { CvComponent } from './cv/cv.component';
+import { ListComponent } from './list/list.component';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { SliderObservableComponent } from './asynchProg/slider-observable/slider
     LoginComponent,
     HeaderComponent,
     AddComponent,
-    SliderObservableComponent
+    SliderObservableComponent,
+    ItemComponent,
+    CvComponent,
+    ListComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

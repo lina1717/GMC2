@@ -37,7 +37,8 @@ const routes: Routes = [
    
   {
     path: 'add',component: AddComponent
-    } 
+    } ,
+    {path: 'cv', redirectTo: '', pathMatch: 'full'},
 
     ];
 
