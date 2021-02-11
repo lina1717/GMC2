@@ -19,6 +19,7 @@ import { ItemComponent } from './item/item.component';
 import { CvComponent } from './cv/cv.component';
 import { ListComponent } from './list/list.component';
 import { DetailComponent } from './detail/detail.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { DetailComponent } from './detail/detail.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [ ],
   bootstrap: [AppComponent]

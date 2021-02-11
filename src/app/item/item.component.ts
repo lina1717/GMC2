@@ -21,5 +21,6 @@ export class ItemComponent implements OnInit {
     sendPersonne()
       {this.cvService.clickOnItem(this.personne);
       }
+    
  
  }

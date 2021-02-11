@@ -8,16 +8,27 @@ import { CvService } from '../services/cv.service';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
- @Input() personnes: Person[] =[];
+ @Input() personnes: any;
   @Output() forwardPerson = new EventEmitter();
   constructor(
     private cvService: CvService
   ) { }
 
+  //ngOnInit() {
+   // this.personnes = this.cvService.getPersons();
+  //}
+
+
+  //*******API**************************
   ngOnInit() {
+    this.cvService.getPersonnes().subscribe(
+      (personnes) => {this.personnes = personnes; },
+      (error) => {
+        this.personnes = this.cvService.getPersonnes();
+        alert(`Problème de connexion les données sont fake`);
+      }
+    );
+ }
+ 
 
-
-
-    this.personnes = this.cvService.getPersons();
-  }
 }

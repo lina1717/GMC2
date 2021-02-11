@@ -4,7 +4,9 @@ import { AddComponent } from './add/add.component';
 import { ColorComponent } from './color/color.component';
 import { Comp1Component } from './comp1/comp1.component';
 import { Comp2Component } from './comp2/comp2.component';
+import { CvComponent } from './cv/cv.component';
 import { DetailPersonComponent } from './detail-person/detail-person.component';
+import { DetailComponent } from './detail/detail.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
@@ -27,10 +29,6 @@ const routes: Routes = [
       }
     ]
   },
-
-
-
-
   {
    path: 'login',component: LoginComponent
    } ,
@@ -38,7 +36,8 @@ const routes: Routes = [
   {
     path: 'add',component: AddComponent
     } ,
-    {path: 'cv', redirectTo: '', pathMatch: 'full'},
+ 
+    {path: 'cv', redirectTo: '', pathMatch: 'full'}
 
     ];
 
