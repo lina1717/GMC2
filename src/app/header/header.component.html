@@ -55,6 +55,14 @@
           >login
          </a>
        </li>
+
+        <li class="nav-item"
+       *ngIf="authService.isAutheticated()">
+       <a class="nav-link"
+       (click)="logout()"
+  
+       >Logout</a>
+     </li>
       </ul>
   
   </div>

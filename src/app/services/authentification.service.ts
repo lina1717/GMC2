@@ -12,6 +12,12 @@ export class AuthentificationService {
 
   login(credentials: any): Observable<any> {
     return this.http.post<any>(API_LINK_AUTH,credentials);
+  
   }
-
+  logout() {
+    localStorage.removeItem('token');
+  }
+  isAutheticated() {
+    return !!localStorage.getItem('token');
+  }
 }

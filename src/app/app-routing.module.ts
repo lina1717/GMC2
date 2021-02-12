@@ -7,6 +7,8 @@ import { Comp2Component } from './comp2/comp2.component';
 import { CvComponent } from './cv/cv.component';
 import { DetailPersonComponent } from './detail-person/detail-person.component';
 import { DetailComponent } from './detail/detail.component';
+import { AuthGuard } from './guards/auth.guard';
+import { NotLoggedGuard } from './guards/not-logged.guard';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
@@ -30,11 +32,11 @@ const routes: Routes = [
     ]
   },
   {
-   path: 'login',component: LoginComponent
+   path: 'login',component: LoginComponent ,canActivate :[NotLoggedGuard]
    } ,
    
   {
-    path: 'add',component: AddComponent
+    path: 'add',component: AddComponent,canActivate :[AuthGuard]
     } ,
  
     {path: 'cv', component: CvComponent}
