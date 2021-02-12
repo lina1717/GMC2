@@ -1,4 +1,4 @@
-<form  #personForm = "ngForm">
+<form #formulaire="ngForm">
 
     name :
     <input
@@ -42,6 +42,10 @@
     name ="cin"
     type="number"
     class="form-control">
+
+
+
+    <button [disabled]="formulaire.invalid" (click)="addPersonna(formulaire)" class="btn btn-primary">Envoyer</button>
 
 </form>
 

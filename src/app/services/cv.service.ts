@@ -2,7 +2,7 @@ import { Injectable, Input, Output } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { Person } from '../model/Person';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-
+const API_link= 'https://immense-citadel-91115.herokuapp.com/api/personnes'
 const API_PATH = 'https://immense-citadel-91115.herokuapp.com/api/personnes/';
 @Injectable({
     providedIn: 'root'
@@ -51,12 +51,11 @@ export class CvService {
 
     }
 
-    addPerson(person: Person) {
+   /* addPerson(person: Person) {
         this.personnes.push(person);
+    }*/
 
-
-
-    }
+    
 
     getPersonnes(): Observable<Person[]> {
         return this.http.get<Person[]>(API_PATH);
@@ -77,7 +76,24 @@ export class CvService {
 
     }
 
-}
+    addPersonne(personne: Person){
+
+        const token = localStorage.getItem('token');
+ 
+        if (token) {
+        const headers = new HttpHeaders().set('Authorization',token);
+ 
+        return this.http.post(API_link,personne ,{headers});
+       }
+ 
+       return this.http.post(API_link,personne);
+       }
+ 
+     }
+ 
+    
+
+
 
 
 

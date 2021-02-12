@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm, NgModelGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Person } from '../model/Person';
 import { CvService } from '../services/cv.service';
 
 @Component({
@@ -27,4 +28,29 @@ export class AddComponent implements OnInit {
 
 
   //}
+  addPersonne(personne: Person) {
+    this.cvService.addPersonne(personne).subscribe(
+       (success:Object) =>{
+        console.log(success);
+        const linK =['cv'];
+        this.router.navigate(linK);
+
+       },
+       (error) => console.log(error)
+
+    );
+
+
+  }
+
+
+  addPersonna(formumaire: NgForm) {
+    this.cvService.addPersonne(formumaire.value).subscribe(
+      (success) =>{
+
+        console.log(success)
+       this.router.navigate(['comp1'])},
+      (erreur) => console.log(erreur)
+    );
+  }
 }
