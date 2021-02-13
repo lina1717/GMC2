@@ -76,7 +76,7 @@ export class CvService {
 
     }
 
-    addPersonne(personne: Person){
+   /* addPersonne(personne: Person){
 
         const token = localStorage.getItem('token');
  
@@ -87,8 +87,19 @@ export class CvService {
        }
  
        return this.http.post(API_link,personne);
-       }
- 
+       }*/
+
+       addPersonne(personne: Person){
+         const headers = new HttpHeaders();
+  
+         return this.http.post(API_link,personne ,{headers});
+
+        }
+
+       
+
+
+
      }
  
     

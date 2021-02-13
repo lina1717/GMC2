@@ -19,7 +19,8 @@ import { ItemComponent } from './item/item.component';
 import { CvComponent } from './cv/cv.component';
 import { ListComponent } from './list/list.component';
 import { DetailComponent } from './detail/detail.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule,HttpInterceptor, HTTP_INTERCEPTORS} from '@angular/common/http';
+import { AuthentificationInterceptorProvider, TokenInterceptorService } from './token-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,13 @@ import {HttpClientModule} from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [ ],
+  providers: [ AuthentificationInterceptorProvider
+  /*  {
+    provide : HTTP_INTERCEPTORS,
+    useClass : TokenInterceptorService,
+    multi :true
+    }*/
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
